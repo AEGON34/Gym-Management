@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Member Details - PowerFit Gym</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="print.css">
+</head>
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">🏋️ PowerFit Gym</div>
+      <ul class="nav-links">
+        <li><a href="trainer-dashboard.html">Dashboard</a></li>
+        <li><a href="#">My Members</a></li>
+        <li><a href="#">Schedule</a></li>
+        <li><a href="member-chat.html">Messages</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SIDEBAR NAVIGATION -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">PowerFit</div>
+    <ul class="sidebar-menu">
+      <li class="sidebar-item">
+        <a href="trainer-dashboard.html" class="sidebar-link">📊 Dashboard</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="#" class="sidebar-link active">👥 My Members</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="trainer-create-workout.html" class="sidebar-link">🏋️ Create Workout</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="trainer-create-diet.html" class="sidebar-link">🥗 Create Diet</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="trainer-log-progress.html" class="sidebar-link">📈 Log Progress</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="member-chat.html" class="sidebar-link">💬 Messages</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="login.html" class="sidebar-link">🚪 Logout</a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="flex-between">
+        <div class="breadcrumb">
+          <a href="trainer-dashboard.html">Dashboard</a> / <span>Member Details</span>
+        </div>
+        <div class="flex" style="gap: 1rem;">
+          <div class="profile-circle sm">💪</div>
+          <div>
+            <div style="font-weight: 600; font-size: 0.875rem;">John Smith</div>
+            <div style="font-size: 0.75rem; color: #6b7280;">Strength Training Specialist</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- MEMBER HEADER -->
+      <div class="card" style="margin-bottom: 2rem;">
+        <div style="display: flex; gap: 2rem; align-items: start;">
+          <div style="flex-shrink: 0;">
+            <div class="profile-circle lg">👨</div>
+          </div>
+          <div style="flex-grow: 1;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+              <h1 style="margin-bottom: 0;">John Anderson</h1>
+              <span class="badge badge-primary">Pro Member</span>
+              <span class="badge badge-success" style="margin-bottom: 0;">Active</span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem;">
+              <div>
+                <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.25rem;">Current Weight</p>
+                <p style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0;">75 kg</p>
+              </div>
+              <div>
+                <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.25rem;">Target Weight</p>
+                <p style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0;">70 kg</p>
+              </div>
+              <div>
+                <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.25rem;">Days Active</p>
+                <p style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0;">45 days</p>
+              </div>
+              <div>
+                <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.25rem;">Completion Rate</p>
+                <p style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0;">85%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TABS -->
+      <div class="tabs">
+        <button class="tab-button active" onclick="showTab(event, 'workout')">Workout Plan</button>
+        <button class="tab-button" onclick="showTab(event, 'diet')">Diet Plan</button>
+        <button class="tab-button" onclick="showTab(event, 'progress')">Health Progress</button>
+        <button class="tab-button" onclick="showTab(event, 'notes')">Notes</button>
+      </div>
+
+      <!-- WORKOUT PLAN TAB (DEFAULT) -->
+      <div id="workout" class="tab-content active">
+        <div class="card">
+          <h3>Weekly Workout Plan</h3>
+          
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="margin-bottom: 1rem; color: #3b82f6;">Monday - Push Day</h4>
+            <div class="card card-no-hover" style="margin-bottom: 1rem; background-color: #f9fafb;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Exercise Name</th>
+                    <th>Sets</th>
+                    <th>Reps</th>
+                    <th>Weight</th>
+                    <th>Rest</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Bench Press</strong></td>
+                    <td>4</td>
+                    <td>8-10</td>
+                    <td>80 kg</td>
+                    <td>120s</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Incline Dumbbell Press</strong></td>
+                    <td>3</td>
+                    <td>10-12</td>
+                    <td>30 kg</td>
+                    <td>90s</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Cable Flyes</strong></td>
+                    <td>3</td>
+                    <td>12-15</td>
+                    <td>20 kg</td>
+                    <td>60s</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Overhead Press</strong></td>
+                    <td>3</td>
+                    <td>8-10</td>
+                    <td>50 kg</td>
+                    <td>120s</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lateral Raise</strong></td>
+                    <td>3</td>
+                    <td>12-15</td>
+                    <td>15 kg</td>
+                    <td>60s</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Tricep Dips</strong></td>
+                    <td>3</td>
+                    <td>10-12</td>
+                    <td>BW</td>
+                    <td>60s</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button class="btn btn-sm btn-primary">Edit Day</button>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="margin-bottom: 1rem; color: #3b82f6;">Tuesday - Pull Day</h4>
+            <div class="card card-no-hover" style="margin-bottom: 1rem; background-color: #f9fafb;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Exercise Name</th>
+                    <th>Sets</th>
+                    <th>Reps</th>
+                    <th>Weight</th>
+                    <th>Rest</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Deadlifts</strong></td>
+                    <td>4</td>
+                    <td>5-6</td>
+                    <td>100 kg</td>
+                    <td>180s</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Bent Over Rows</strong></td>
+                    <td>4</td>
+                    <td>8-10</td>
+                    <td>70 kg</td>
+                    <td>120s</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Pullups</strong></td>
+                    <td>3</td>
+                    <td>8-12</td>
+                    <td>BW</td>
+                    <td>90s</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Barbell Curls</strong></td>
+                    <td>3</td>
+                    <td>10-12</td>
+                    <td>40 kg</td>
+                    <td>90s</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Face Pulls</strong></td>
+                    <td>3</td>
+                    <td>15-20</td>
+                    <td>30 kg</td>
+                    <td>60s</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button class="btn btn-sm btn-primary">Edit Day</button>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="margin-bottom: 1rem; color: #3b82f6;">Wednesday - Legs</h4>
+            <p style="color: #6b7280; font-size: 0.875rem;">6 exercises - 60 minutes</p>
+            <button class="btn btn-sm btn-primary">Edit Day</button>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="margin-bottom: 1rem; color: #3b82f6;">Thursday - Rest</h4>
+            <p style="color: #6b7280; font-size: 0.875rem;">Recovery day - Light stretching recommended</p>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="margin-bottom: 1rem; color: #3b82f6;">Friday - Upper Body</h4>
+            <p style="color: #6b7280; font-size: 0.875rem;">5 exercises - 45 minutes</p>
+            <button class="btn btn-sm btn-primary">Edit Day</button>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="margin-bottom: 1rem; color: #3b82f6;">Saturday - Cardio</h4>
+            <p style="color: #6b7280; font-size: 0.875rem;">30-45 minutes of steady-state cardio</p>
+            <button class="btn btn-sm btn-primary">Edit Day</button>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="margin-bottom: 1rem; color: #3b82f6;">Sunday - Rest</h4>
+            <p style="color: #6b7280; font-size: 0.875rem;">Complete rest day</p>
+          </div>
+
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+            <a href="trainer-create-workout.html" class="btn btn-primary btn-lg">Create New Workout Plan</a>
+            <button class="btn btn-outline btn-lg" onclick="window.print()">🖨️ Print Workout Plan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIET PLAN TAB -->
+      <div id="diet" class="tab-content">
+        <div class="card">
+          <h3>Nutrition Plan</h3>
+          <div style="margin-bottom: 2rem;">
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem;">Daily Calorie Target</p>
+            <p style="font-size: 2.5rem; font-weight: bold; color: #3b82f6;">2,500 kcal</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+            <div class="card card-no-hover" style="text-align: center;">
+              <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem;">Protein</p>
+              <p style="font-size: 2rem; font-weight: bold; color: #ef4444;">175g (28%)</p>
+            </div>
+            <div class="card card-no-hover" style="text-align: center;">
+              <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem;">Carbs</p>
+              <p style="font-size: 2rem; font-weight: bold; color: #f59e0b;">312g (50%)</p>
+            </div>
+            <div class="card card-no-hover" style="text-align: center;">
+              <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem;">Fats</p>
+              <p style="font-size: 2rem; font-weight: bold; color: #10b981;">83g (30%)</p>
+            </div>
+          </div>
+
+          <h4 style="margin-bottom: 1rem;">Meal Breakdown</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Meal</th>
+                <th>Time</th>
+                <th>Foods</th>
+                <th>Calories</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Breakfast</strong></td>
+                <td>7:00 AM</td>
+                <td>Oatmeal, Berries, Almond Butter</td>
+                <td>500 kcal</td>
+              </tr>
+              <tr>
+                <td><strong>Snack 1</strong></td>
+                <td>10:00 AM</td>
+                <td>Protein Shake, Banana</td>
+                <td>300 kcal</td>
+              </tr>
+              <tr>
+                <td><strong>Lunch</strong></td>
+                <td>1:00 PM</td>
+                <td>Grilled Chicken, Brown Rice, Vegetables</td>
+                <td>650 kcal</td>
+              </tr>
+              <tr>
+                <td><strong>Snack 2</strong></td>
+                <td>4:00 PM</td>
+                <td>Greek Yogurt, Granola</td>
+                <td>250 kcal</td>
+              </tr>
+              <tr>
+                <td><strong>Dinner</strong></td>
+                <td>7:00 PM</td>
+                <td>Salmon, Sweet Potato, Broccoli</td>
+                <td>650 kcal</td>
+              </tr>
+              <tr>
+                <td><strong>Bedtime</strong></td>
+                <td>9:00 PM</td>
+                <td>Casein Shake</td>
+                <td>150 kcal</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+            <a href="trainer-create-diet.html" class="btn btn-primary btn-lg">Create New Diet Plan</a>
+            <button class="btn btn-outline btn-lg" onclick="window.print()">🖨️ Print Diet Plan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROGRESS TAB -->
+      <div id="progress" class="tab-content">
+        <div class="card">
+          <h3>Progress Tracking</h3>
+          
+          <h4 style="margin-bottom: 1rem; margin-top: 1.5rem;">Weight Progress (Last 8 Weeks)</h4>
+          <div style="display: flex; align-items: flex-end; gap: 0.5rem; height: 200px; margin-bottom: 2rem; padding: 1rem; background-color: #f9fafb; border-radius: 8px;">
+            <div style="flex: 1; height: 50%; background-color: #3b82f6; border-radius: 4px; position: relative;">
+              <span style="font-size: 0.75rem; position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%);">78kg</span>
+            </div>
+            <div style="flex: 1; height: 55%; background-color: #3b82f6; border-radius: 4px; position: relative;">
+              <span style="font-size: 0.75rem; position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%);">77kg</span>
+            </div>
+            <div style="flex: 1; height: 60%; background-color: #3b82f6; border-radius: 4px; position: relative;">
+              <span style="font-size: 0.75rem; position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%);">76kg</span>
+            </div>
+            <div style="flex: 1; height: 65%; background-color: #3b82f6; border-radius: 4px; position: relative;">
+              <span style="font-size: 0.75rem; position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%);">75.5kg</span>
+            </div>
+            <div style="flex: 1; height: 70%; background-color: #3b82f6; border-radius: 4px; position: relative;">
+              <span style="font-size: 0.75rem; position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%);">75kg</span>
+            </div>
+            <div style="flex: 1; height: 72%; background-color: #10b981; border-radius: 4px; position: relative;">
+              <span style="font-size: 0.75rem; position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%);">74.5kg</span>
+            </div>
+            <div style="flex: 1; height: 75%; background-color: #10b981; border-radius: 4px; position: relative;">
+              <span style="font-size: 0.75rem; position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%);">74kg</span>
+            </div>
+            <div style="flex: 1; height: 80%; background-color: #10b981; border-radius: 4px; position: relative;">
+              <span style="font-size: 0.75rem; position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%);">73kg</span>
+            </div>
+          </div>
+          <p style="color: #6b7280; font-size: 0.875rem;">Week 1 → Week 8 | Total Loss: 5kg</p>
+
+          <h4 style="margin-bottom: 1rem; margin-top: 2rem;">Body Measurements History</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Weight</th>
+                <th>Chest</th>
+                <th>Waist</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Jan 13, 2026</td>
+                <td>75 kg</td>
+                <td>96 cm</td>
+                <td>82 cm</td>
+                <td>Great progress!</td>
+              </tr>
+              <tr>
+                <td>Jan 6, 2026</td>
+                <td>75.5 kg</td>
+                <td>97 cm</td>
+                <td>83 cm</td>
+                <td>Stable</td>
+              </tr>
+              <tr>
+                <td>Dec 30, 2025</td>
+                <td>76 kg</td>
+                <td>98 cm</td>
+                <td>84 cm</td>
+                <td>Consistent training</td>
+              </tr>
+              <tr>
+                <td>Dec 23, 2025</td>
+                <td>76.5 kg</td>
+                <td>99 cm</td>
+                <td>84 cm</td>
+                <td>Good week</td>
+              </tr>
+              <tr>
+                <td>Dec 16, 2025</td>
+                <td>77 kg</td>
+                <td>100 cm</td>
+                <td>85 cm</td>
+                <td>Starting point</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+            <a href="trainer-log-progress.html" class="btn btn-primary btn-lg">Log New Progress Entry</a>
+            <button class="btn btn-outline btn-lg" onclick="window.print()">🖨️ Print Progress Report</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- NOTES TAB -->
+      <div id="notes" class="tab-content">
+        <div class="card">
+          <h3>Trainer Notes</h3>
+          
+          <div class="card card-no-hover" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+              <div>
+                <p style="font-weight: 600; margin-bottom: 0.25rem;">Jan 12, 2026</p>
+                <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 0;">5:45 PM</p>
+              </div>
+              <a href="#" style="color: #3b82f6; font-size: 0.875rem;">Edit</a>
+            </div>
+            <p>John completed all sets for leg day with excellent form. He's showing great improvement in squat depth and control. Recommend increasing weight slightly next session.</p>
+          </div>
+
+          <div class="card card-no-hover" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+              <div>
+                <p style="font-weight: 600; margin-bottom: 0.25rem;">Jan 10, 2026</p>
+                <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 0;">4:30 PM</p>
+              </div>
+              <a href="#" style="color: #3b82f6; font-size: 0.875rem;">Edit</a>
+            </div>
+            <p>Member mentioned slight knee discomfort after leg press. Adjusted form and reduced volume slightly. Monitor closely in upcoming sessions. Consider foam rolling recommendations.</p>
+          </div>
+
+          <div class="card card-no-hover" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+              <div>
+                <p style="font-weight: 600; margin-bottom: 0.25rem;">Jan 8, 2026</p>
+                <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 0;">3:15 PM</p>
+              </div>
+              <a href="#" style="color: #3b82f6; font-size: 0.875rem;">Edit</a>
+            </div>
+            <p>Excellent progress on bench press. John hit a new personal record of 80kg for 8 reps. He's very motivated and consistent with his training. Keep up the good momentum!</p>
+          </div>
+
+          <div class="card card-no-hover" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+              <div>
+                <p style="font-weight: 600; margin-bottom: 0.25rem;">Jan 6, 2026</p>
+                <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 0;">6:00 PM</p>
+              </div>
+              <a href="#" style="color: #3b82f6; font-size: 0.875rem;">Edit</a>
+            </div>
+            <p>Good session today. Member is recovering well and energy levels are improving. Weight is down 0.5kg this week. Continue current nutrition plan.</p>
+          </div>
+
+          <button class="btn btn-primary btn-lg">Add New Note</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function showTab(evt, tabName) {
+      var i, tabcontent, tabbuttons;
+      tabcontent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.remove("active");
+      }
+      tabbuttons = document.getElementsByClassName("tab-button");
+      for (i = 0; i < tabbuttons.length; i++) {
+        tabbuttons[i].classList.remove("active");
+      }
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
+</body>
+</html>

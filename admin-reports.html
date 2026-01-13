@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Statistics & Reports - PowerFit Gym</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="print.css">
+</head>
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">🏋️ PowerFit Gym</div>
+      <ul class="nav-links">
+        <li><a href="admin-dashboard.html">Dashboard</a></li>
+        <li><a href="#">Members</a></li>
+        <li><a href="#">Trainers</a></li>
+        <li><a href="admin-reports.html">Reports</a></li>
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SIDEBAR NAVIGATION -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">PowerFit</div>
+    <ul class="sidebar-menu">
+      <li class="sidebar-item">
+        <a href="admin-dashboard.html" class="sidebar-link">📊 Dashboard</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="#" class="sidebar-link">👥 Members</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="#" class="sidebar-link">🏋️ Trainers</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-add-member.html" class="sidebar-link">➕ Add Member</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-add-trainer.html" class="sidebar-link">➕ Add Trainer</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-reports.html" class="sidebar-link active">📈 Reports</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="#" class="sidebar-link">⚙️ Settings</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="index.html" class="sidebar-link">🚪 Logout</a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="flex-between">
+        <div class="breadcrumb">
+          <a href="admin-dashboard.html">Dashboard</a> / <span>Statistics & Reports</span>
+        </div>
+        <div class="flex" style="gap: 1rem;">
+          <button class="btn btn-primary btn-sm" onclick="window.print()">🖨️ Print Report</button>
+          <div class="profile-circle sm">👤</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Statistics & Reports</h1>
+      <p style="color: #6b7280; margin-bottom: 2rem;">Comprehensive gym analytics and performance metrics</p>
+
+      <!-- OVERVIEW STATS -->
+      <div class="grid-4" style="margin-bottom: 2rem;">
+        <div class="stat-card">
+          <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">👥</div>
+          <div class="stat-number">156</div>
+          <div class="stat-label">Total Members</div>
+          <p style="font-size: 0.75rem; color: #10b981; margin-top: 0.5rem;">↑ 12% from last month</p>
+        </div>
+        <div class="stat-card success">
+          <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🏋️</div>
+          <div class="stat-number">12</div>
+          <div class="stat-label">Active Trainers</div>
+          <p style="font-size: 0.75rem; color: #10b981; margin-top: 0.5rem;">↑ 2 new this month</p>
+        </div>
+        <div class="stat-card warning">
+          <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">💰</div>
+          <div class="stat-number">$24,850</div>
+          <div class="stat-label">Monthly Revenue</div>
+          <p style="font-size: 0.75rem; color: #10b981; margin-top: 0.5rem;">↑ 8% from last month</p>
+        </div>
+        <div class="stat-card info">
+          <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📊</div>
+          <div class="stat-number">89%</div>
+          <div class="stat-label">Retention Rate</div>
+          <p style="font-size: 0.75rem; color: #10b981; margin-top: 0.5rem;">↑ 3% improvement</p>
+        </div>
+      </div>
+
+      <!-- MEMBERSHIP BREAKDOWN -->
+      <div class="grid-2" style="gap: 2rem; margin-bottom: 2rem;">
+        <div class="card">
+          <h3 style="margin-bottom: 1.5rem;">📊 Membership Distribution</h3>
+          
+          <!-- Visual Bar Representation -->
+          <div style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-weight: 500;">Premium Members</span>
+              <span style="color: #6b7280;">42 (27%)</span>
+            </div>
+            <div style="background: #e5e7eb; border-radius: 8px; height: 24px; overflow: hidden;">
+              <div style="background: linear-gradient(90deg, #8b5cf6, #a78bfa); height: 100%; width: 27%; border-radius: 8px;"></div>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-weight: 500;">Pro Members</span>
+              <span style="color: #6b7280;">68 (44%)</span>
+            </div>
+            <div style="background: #e5e7eb; border-radius: 8px; height: 24px; overflow: hidden;">
+              <div style="background: linear-gradient(90deg, #3b82f6, #60a5fa); height: 100%; width: 44%; border-radius: 8px;"></div>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-weight: 500;">Basic Members</span>
+              <span style="color: #6b7280;">46 (29%)</span>
+            </div>
+            <div style="background: #e5e7eb; border-radius: 8px; height: 24px; overflow: hidden;">
+              <div style="background: linear-gradient(90deg, #10b981, #34d399); height: 100%; width: 29%; border-radius: 8px;"></div>
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid #e5e7eb; padding-top: 1rem; margin-top: 1rem;">
+            <div style="display: flex; justify-content: space-between;">
+              <span style="font-weight: 600;">Total Active Members</span>
+              <span style="font-weight: 600; color: #3b82f6;">156</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-bottom: 1.5rem;">💰 Revenue by Membership Type</h3>
+          
+          <div style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-weight: 500;">Premium ($79/mo × 42)</span>
+              <span style="color: #6b7280;">$3,318</span>
+            </div>
+            <div style="background: #e5e7eb; border-radius: 8px; height: 24px; overflow: hidden;">
+              <div style="background: linear-gradient(90deg, #8b5cf6, #a78bfa); height: 100%; width: 45%; border-radius: 8px;"></div>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-weight: 500;">Pro ($49/mo × 68)</span>
+              <span style="color: #6b7280;">$3,332</span>
+            </div>
+            <div style="background: #e5e7eb; border-radius: 8px; height: 24px; overflow: hidden;">
+              <div style="background: linear-gradient(90deg, #3b82f6, #60a5fa); height: 100%; width: 45%; border-radius: 8px;"></div>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-weight: 500;">Basic ($29/mo × 46)</span>
+              <span style="color: #6b7280;">$1,334</span>
+            </div>
+            <div style="background: #e5e7eb; border-radius: 8px; height: 24px; overflow: hidden;">
+              <div style="background: linear-gradient(90deg, #10b981, #34d399); height: 100%; width: 18%; border-radius: 8px;"></div>
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid #e5e7eb; padding-top: 1rem; margin-top: 1rem;">
+            <div style="display: flex; justify-content: space-between;">
+              <span style="font-weight: 600;">Total Monthly Revenue</span>
+              <span style="font-weight: 600; color: #10b981;">$7,984</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MONTHLY TRENDS -->
+      <div class="card" style="margin-bottom: 2rem;">
+        <h3 style="margin-bottom: 1.5rem;">📈 Monthly Member Growth (Last 6 Months)</h3>
+        
+        <!-- Bar Chart -->
+        <div style="display: flex; align-items: end; gap: 1.5rem; height: 220px; padding: 1rem 0; border-bottom: 2px solid #e5e7eb;">
+          <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+            <div style="background: linear-gradient(to top, #3b82f6, #60a5fa); width: 100%; height: 130px; border-radius: 4px 4px 0 0;"></div>
+            <span style="font-size: 0.75rem; color: #6b7280; margin-top: 0.5rem;">Aug</span>
+            <span style="font-size: 0.875rem; font-weight: 600;">128</span>
+          </div>
+          <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+            <div style="background: linear-gradient(to top, #3b82f6, #60a5fa); width: 100%; height: 140px; border-radius: 4px 4px 0 0;"></div>
+            <span style="font-size: 0.75rem; color: #6b7280; margin-top: 0.5rem;">Sep</span>
+            <span style="font-size: 0.875rem; font-weight: 600;">132</span>
+          </div>
+          <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+            <div style="background: linear-gradient(to top, #3b82f6, #60a5fa); width: 100%; height: 145px; border-radius: 4px 4px 0 0;"></div>
+            <span style="font-size: 0.75rem; color: #6b7280; margin-top: 0.5rem;">Oct</span>
+            <span style="font-size: 0.875rem; font-weight: 600;">138</span>
+          </div>
+          <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+            <div style="background: linear-gradient(to top, #3b82f6, #60a5fa); width: 100%; height: 155px; border-radius: 4px 4px 0 0;"></div>
+            <span style="font-size: 0.75rem; color: #6b7280; margin-top: 0.5rem;">Nov</span>
+            <span style="font-size: 0.875rem; font-weight: 600;">142</span>
+          </div>
+          <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+            <div style="background: linear-gradient(to top, #3b82f6, #60a5fa); width: 100%; height: 170px; border-radius: 4px 4px 0 0;"></div>
+            <span style="font-size: 0.75rem; color: #6b7280; margin-top: 0.5rem;">Dec</span>
+            <span style="font-size: 0.875rem; font-weight: 600;">148</span>
+          </div>
+          <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+            <div style="background: linear-gradient(to top, #10b981, #34d399); width: 100%; height: 200px; border-radius: 4px 4px 0 0;"></div>
+            <span style="font-size: 0.75rem; color: #6b7280; margin-top: 0.5rem;">Jan</span>
+            <span style="font-size: 0.875rem; font-weight: 600; color: #10b981;">156</span>
+          </div>
+        </div>
+        
+        <div style="display: flex; justify-content: space-between; margin-top: 1rem; padding: 1rem; background: #f0fdf4; border-radius: 8px;">
+          <div>
+            <span style="font-size: 0.875rem; color: #6b7280;">Total Growth</span>
+            <p style="font-size: 1.25rem; font-weight: bold; color: #10b981; margin-bottom: 0;">+28 members (22%)</p>
+          </div>
+          <div>
+            <span style="font-size: 0.875rem; color: #6b7280;">Avg Monthly Growth</span>
+            <p style="font-size: 1.25rem; font-weight: bold; color: #10b981; margin-bottom: 0;">+4.7 members</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRAINER PERFORMANCE -->
+      <div class="card" style="margin-bottom: 2rem;">
+        <h3 style="margin-bottom: 1.5rem;">🏋️ Trainer Performance</h3>
+        
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Trainer</th>
+                <th>Specialization</th>
+                <th>Assigned Members</th>
+                <th>Avg. Member Progress</th>
+                <th>Satisfaction Rating</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="profile-circle sm">💪</div>
+                    <strong>John Smith</strong>
+                  </div>
+                </td>
+                <td>Strength Training</td>
+                <td>18</td>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div style="background: #e5e7eb; border-radius: 8px; height: 8px; width: 100px;">
+                      <div style="background: #10b981; height: 100%; width: 92%; border-radius: 8px;"></div>
+                    </div>
+                    <span>92%</span>
+                  </div>
+                </td>
+                <td>⭐ 4.9/5</td>
+                <td><span class="badge badge-success">Top Performer</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="profile-circle sm">🧘</div>
+                    <strong>Sarah Johnson</strong>
+                  </div>
+                </td>
+                <td>Yoga & Flexibility</td>
+                <td>15</td>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div style="background: #e5e7eb; border-radius: 8px; height: 8px; width: 100px;">
+                      <div style="background: #10b981; height: 100%; width: 88%; border-radius: 8px;"></div>
+                    </div>
+                    <span>88%</span>
+                  </div>
+                </td>
+                <td>⭐ 4.8/5</td>
+                <td><span class="badge badge-success">Excellent</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="profile-circle sm">🏃</div>
+                    <strong>Michael Chen</strong>
+                  </div>
+                </td>
+                <td>Cardio & HIIT</td>
+                <td>14</td>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div style="background: #e5e7eb; border-radius: 8px; height: 8px; width: 100px;">
+                      <div style="background: #3b82f6; height: 100%; width: 85%; border-radius: 8px;"></div>
+                    </div>
+                    <span>85%</span>
+                  </div>
+                </td>
+                <td>⭐ 4.7/5</td>
+                <td><span class="badge badge-primary">Good</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="profile-circle sm">🤸</div>
+                    <strong>Emma Wilson</strong>
+                  </div>
+                </td>
+                <td>CrossFit</td>
+                <td>12</td>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div style="background: #e5e7eb; border-radius: 8px; height: 8px; width: 100px;">
+                      <div style="background: #3b82f6; height: 100%; width: 82%; border-radius: 8px;"></div>
+                    </div>
+                    <span>82%</span>
+                  </div>
+                </td>
+                <td>⭐ 4.6/5</td>
+                <td><span class="badge badge-primary">Good</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="profile-circle sm">🥊</div>
+                    <strong>James Martinez</strong>
+                  </div>
+                </td>
+                <td>Boxing & MMA</td>
+                <td>10</td>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div style="background: #e5e7eb; border-radius: 8px; height: 8px; width: 100px;">
+                      <div style="background: #f59e0b; height: 100%; width: 78%; border-radius: 8px;"></div>
+                    </div>
+                    <span>78%</span>
+                  </div>
+                </td>
+                <td>⭐ 4.5/5</td>
+                <td><span class="badge badge-warning">Average</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- WORKOUT COMPLETION STATS -->
+      <div class="grid-2" style="gap: 2rem; margin-bottom: 2rem;">
+        <div class="card">
+          <h3 style="margin-bottom: 1.5rem;">🎯 Workout Completion Rate</h3>
+          
+          <div style="text-align: center; margin-bottom: 1.5rem;">
+            <div style="font-size: 4rem; font-weight: bold; color: #10b981;">87%</div>
+            <p style="color: #6b7280;">Average completion rate across all members</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="card card-no-hover" style="text-align: center; background: #f0fdf4;">
+              <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.25rem;">Workouts Completed</p>
+              <p style="font-size: 1.5rem; font-weight: bold; color: #10b981; margin-bottom: 0;">1,248</p>
+            </div>
+            <div class="card card-no-hover" style="text-align: center; background: #fef3c7;">
+              <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.25rem;">Workouts Missed</p>
+              <p style="font-size: 1.5rem; font-weight: bold; color: #f59e0b; margin-bottom: 0;">186</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-bottom: 1.5rem;">📅 Popular Workout Days</h3>
+          
+          <div style="margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span>Monday</span>
+              <span style="color: #6b7280;">245 check-ins</span>
+            </div>
+            <div style="background: #e5e7eb; border-radius: 8px; height: 16px; overflow: hidden;">
+              <div style="background: #3b82f6; height: 100%; width: 95%; border-radius: 8px;"></div>
+            </div>
+          </div>
+          <div style="margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span>Tuesday</span>
+              <span style="color: #6b7280;">198 check-ins</span>
+            </div>
+            <div style="background: #e5e7eb; border-radius: 8px; height: 16px; overflow: hidden;">
+              <div style="background: #3b82f6; height: 100%; width: 77%; border-radius: 8px;"></div>
+            </div>
+          </div>
+          <div style="margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span>Wednesday</span>
+              <span style="color: #6b7280;">212 check-ins</span>
+            </div>
+            <div style="background: #e5e7eb; border-radius: 8px; height: 16px; overflow: hidden;">
+              <div style="background: #3b82f6; height: 100%; width: 82%; border-radius: 8px;"></div>
+            </div>
+          </div>
+          <div style="margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span>Thursday</span>
+              <span style="color: #6b7280;">156 check-ins</span>
+            </div>
+            <div style="background: #e5e7eb; border-radius: 8px; height: 16px; overflow: hidden;">
+              <div style="background: #10b981; height: 100%; width: 60%; border-radius: 8px;"></div>
+            </div>
+          </div>
+          <div style="margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span>Friday</span>
+              <span style="color: #6b7280;">178 check-ins</span>
+            </div>
+            <div style="background: #e5e7eb; border-radius: 8px; height: 16px; overflow: hidden;">
+              <div style="background: #10b981; height: 100%; width: 69%; border-radius: 8px;"></div>
+            </div>
+          </div>
+          <div style="margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span>Saturday</span>
+              <span style="color: #6b7280;">134 check-ins</span>
+            </div>
+            <div style="background: #e5e7eb; border-radius: 8px; height: 16px; overflow: hidden;">
+              <div style="background: #f59e0b; height: 100%; width: 52%; border-radius: 8px;"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span>Sunday</span>
+              <span style="color: #6b7280;">89 check-ins</span>
+            </div>
+            <div style="background: #e5e7eb; border-radius: 8px; height: 16px; overflow: hidden;">
+              <div style="background: #ef4444; height: 100%; width: 35%; border-radius: 8px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RECENT ACTIVITY LOG -->
+      <div class="card">
+        <h3 style="margin-bottom: 1.5rem;">📋 Recent Activity Log</h3>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background: #10b981;">✓</div>
+            <div class="timeline-content">
+              <p style="font-weight: 500; margin-bottom: 0.25rem;">New member registered: Lisa Anderson</p>
+              <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0;">Premium Membership - Assigned to Sarah Johnson</p>
+            </div>
+            <span class="timeline-time">Today, 2:30 PM</span>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background: #3b82f6;">📝</div>
+            <div class="timeline-content">
+              <p style="font-weight: 500; margin-bottom: 0.25rem;">Workout plan created for John Anderson</p>
+              <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0;">8-Week Strength Building Program by John Smith</p>
+            </div>
+            <span class="timeline-time">Today, 11:45 AM</span>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background: #f59e0b;">⚠️</div>
+            <div class="timeline-content">
+              <p style="font-weight: 500; margin-bottom: 0.25rem;">Membership expiring soon: Michael Davis</p>
+              <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0;">Basic membership expires in 5 days</p>
+            </div>
+            <span class="timeline-time">Today, 9:00 AM</span>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background: #10b981;">💰</div>
+            <div class="timeline-content">
+              <p style="font-weight: 500; margin-bottom: 0.25rem;">Payment received: Sarah Williams</p>
+              <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0;">Premium membership renewal - $79.00</p>
+            </div>
+            <span class="timeline-time">Yesterday, 4:15 PM</span>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background: #8b5cf6;">📈</div>
+            <div class="timeline-content">
+              <p style="font-weight: 500; margin-bottom: 0.25rem;">Progress milestone: Emily Brown</p>
+              <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0;">Reached target weight goal - 5kg lost in 8 weeks</p>
+            </div>
+            <span class="timeline-time">Yesterday, 2:00 PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

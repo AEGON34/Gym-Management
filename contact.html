@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - PowerFit Gym</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="animations.css">
+</head>
+<body class="public-page">
+  <!-- NAVIGATION BAR -->
+  <nav class="public-nav">
+    <div class="nav-container">
+      <div class="nav-logo">🏋️ PowerFit Gym</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        
+        <li><a href="contact.html" class="active">Contact</a></li>
+        
+        <li><a href="login.html" class="btn btn-primary btn-nav btn-nav-dark">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO (LIKE REFERENCE) -->
+  <section class="page-hero page-hero--contact">
+    <div class="container">
+      <h1 class="page-hero-title">
+        <span class="hero-accent">CONTACT</span> <span class="" style="color:bisque;">US</span>
+      </h1>
+      <p class="page-hero-subtitle">We have very professional and expert instructors and they can help you maintain your health and fitness goals.</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid" style="margin-bottom: 3rem;">
+        <!-- LEFT COLUMN: CONTACT INFORMATION -->
+        <div class="card">
+          <h3>Get In Touch</h3>
+          
+          <!-- Address -->
+          <div style="margin-bottom: 1.5rem; display: flex; gap: 1rem;">
+            <span style="font-size: 1.5rem;">📍</span>
+            <div>
+              <h4 style="margin-bottom: 0.25rem;">Address</h4>
+              <p style="margin: 0;">123 Fitness Street, Gym City, GC 12345</p>
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div style="margin-bottom: 1.5rem; display: flex; gap: 1rem;">
+            <span style="font-size: 1.5rem;">☎️</span>
+            <div>
+              <h4 style="margin-bottom: 0.25rem;">Phone</h4>
+              <p style="margin: 0;">(555) 123-4567</p>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div style="margin-bottom: 1.5rem; display: flex; gap: 1rem;">
+            <span style="font-size: 1.5rem;">✉️</span>
+            <div>
+              <h4 style="margin-bottom: 0.25rem;">Email</h4>
+              <p style="margin: 0;">info@powerfitgym.com</p>
+            </div>
+          </div>
+
+          <!-- Hours -->
+          <div style="display: flex; gap: 1rem;">
+            <span style="font-size: 1.5rem;">🕐</span>
+            <div>
+              <h4 style="margin-bottom: 0.25rem;">Business Hours</h4>
+              <p style="margin: 0;">Mon-Fri: 6AM - 10PM</p>
+              <p style="margin: 0;">Sat-Sun: 8AM - 8PM</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: CONTACT FORM -->
+        <div class="card">
+          <h3>Send Message</h3>
+          <form>
+            <!-- Name Field -->
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+
+            <!-- Phone Field -->
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+            </div>
+
+            <!-- Message Field -->
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
+            </div>
+
+            <!-- Subject Field -->
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option value="membership">Membership Inquiry</option>
+                <option value="training">Personal Training</option>
+                <option value="classes">Group Classes</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-block btn-lg">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h4>🏋️ PowerFit Gym</h4>
+          <p>Your trusted partner in achieving fitness excellence. Join us today and start your transformation journey.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Social Media</h4>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 PowerFit Gym. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

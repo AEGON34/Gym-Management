@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trainer Dashboard - PowerFit Gym</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="print.css">
+</head>
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">🏋️ PowerFit Gym</div>
+      <ul class="nav-links">
+        <li><a href="trainer-dashboard.html">Dashboard</a></li>
+        <li><a href="#">My Members</a></li>
+        <li><a href="#">Schedule</a></li>
+        <li><a href="member-chat.html">Messages</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SIDEBAR NAVIGATION -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">PowerFit</div>
+    <ul class="sidebar-menu">
+      <li class="sidebar-item">
+        <a href="trainer-dashboard.html" class="sidebar-link active">📊 Dashboard</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="#" class="sidebar-link">👥 My Members</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="trainer-create-workout.html" class="sidebar-link">🏋️ Create Workout</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="trainer-create-diet.html" class="sidebar-link">🥗 Create Diet</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="trainer-log-progress.html" class="sidebar-link">📈 Log Progress</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="member-chat.html" class="sidebar-link">💬 Messages</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="login.html" class="sidebar-link">🚪 Logout</a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="flex-between">
+        <div class="breadcrumb">
+          <a href="trainer-dashboard.html">Dashboard</a>
+        </div>
+        <div class="flex" style="gap: 1rem;">
+          <div class="profile-circle sm">💪</div>
+          <div>
+            <div style="font-weight: 600; font-size: 0.875rem;">John Smith</div>
+            <div style="font-size: 0.75rem; color: #6b7280;">Strength Training Specialist</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- WELCOME SECTION -->
+      <div style="margin-bottom: 2rem;">
+        <h1>Welcome back, John Smith!</h1>
+        <p style="color: #6b7280; margin-bottom: 1rem;">Today is <strong>January 13, 2026</strong></p>
+        
+        <div class="grid-3">
+          <div class="stat-card">
+            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">👥</div>
+            <div class="stat-number">8</div>
+            <div class="stat-label">Assigned Members</div>
+          </div>
+          <div class="stat-card success">
+            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📋</div>
+            <div class="stat-number">8</div>
+            <div class="stat-label">Active Plans</div>
+          </div>
+          <div class="stat-card warning">
+            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">⏳</div>
+            <div class="stat-number">3</div>
+            <div class="stat-label">Pending Reviews</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ASSIGNED MEMBERS SECTION -->
+      <h2 style="margin-bottom: 1.5rem;">My Members</h2>
+      
+      <div class="card" style="overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 60px;">Photo</th>
+              <th>Name</th>
+              <th>Membership</th>
+              <th>Last Workout</th>
+              <th style="width: 150px;">Progress</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center;"><div class="profile-circle sm" style="width: 40px; height: 40px; margin: 0;">👨</div></td>
+              <td><strong>John Anderson</strong></td>
+              <td><span class="badge badge-primary">Pro</span></td>
+              <td>Jan 12, 2026</td>
+              <td><div class="progress-bar"><div class="progress-fill" style="width: 85%;">85%</div></div></td>
+              <td><a href="trainer-member-details.html" class="btn btn-sm btn-primary">View Details</a></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><div class="profile-circle sm" style="width: 40px; height: 40px; margin: 0;">👩</div></td>
+              <td><strong>Maria Garcia</strong></td>
+              <td><span class="badge badge-success">Premium</span></td>
+              <td>Jan 12, 2026</td>
+              <td><div class="progress-bar"><div class="progress-fill" style="width: 92%;">92%</div></div></td>
+              <td><a href="trainer-member-details.html" class="btn btn-sm btn-primary">View Details</a></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><div class="profile-circle sm" style="width: 40px; height: 40px; margin: 0;">👨‍🦱</div></td>
+              <td><strong>Michael Davis</strong></td>
+              <td><span class="badge badge-primary">Pro</span></td>
+              <td>Jan 10, 2026</td>
+              <td><div class="progress-bar"><div class="progress-fill" style="width: 68%;">68%</div></div></td>
+              <td><a href="trainer-member-details.html" class="btn btn-sm btn-primary">View Details</a></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><div class="profile-circle sm" style="width: 40px; height: 40px; margin: 0;">👩‍🦰</div></td>
+              <td><strong>Emily Brown</strong></td>
+              <td><span class="badge badge-primary">Pro</span></td>
+              <td>Jan 11, 2026</td>
+              <td><div class="progress-bar"><div class="progress-fill" style="width: 78%;">78%</div></div></td>
+              <td><a href="trainer-member-details.html" class="btn btn-sm btn-primary">View Details</a></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><div class="profile-circle sm" style="width: 40px; height: 40px; margin: 0;">👨‍💼</div></td>
+              <td><strong>David Lee</strong></td>
+              <td><span class="badge badge-success">Premium</span></td>
+              <td>Jan 12, 2026</td>
+              <td><div class="progress-bar"><div class="progress-fill" style="width: 88%;">88%</div></div></td>
+              <td><a href="trainer-member-details.html" class="btn btn-sm btn-primary">View Details</a></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><div class="profile-circle sm" style="width: 40px; height: 40px; margin: 0;">👩‍🦳</div></td>
+              <td><strong>Jessica Taylor</strong></td>
+              <td><span class="badge badge-primary">Pro</span></td>
+              <td>Jan 09, 2026</td>
+              <td><div class="progress-bar"><div class="progress-fill" style="width: 55%;">55%</div></div></td>
+              <td><a href="trainer-member-details.html" class="btn btn-sm btn-primary">View Details</a></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><div class="profile-circle sm" style="width: 40px; height: 40px; margin: 0;">👨</div></td>
+              <td><strong>Robert Wilson</strong></td>
+              <td><span class="badge badge-primary">Pro</span></td>
+              <td>Jan 08, 2026</td>
+              <td><div class="progress-bar"><div class="progress-fill" style="width: 72%;">72%</div></div></td>
+              <td><a href="trainer-member-details.html" class="btn btn-sm btn-primary">View Details</a></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><div class="profile-circle sm" style="width: 40px; height: 40px; margin: 0;">👩</div></td>
+              <td><strong>Lisa Anderson</strong></td>
+              <td><span class="badge badge-success">Premium</span></td>
+              <td>Jan 11, 2026</td>
+              <td><div class="progress-bar"><div class="progress-fill" style="width: 95%;">95%</div></div></td>
+              <td><a href="trainer-member-details.html" class="btn btn-sm btn-primary">View Details</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- RECENT ACTIVITY SECTION -->
+      <h2 style="margin: 3rem 0 1.5rem 0;">Recent Activity</h2>
+      <div class="card">
+        <ul class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-dot">✓</div>
+            <div class="timeline-content">
+              <p style="margin-bottom: 0.25rem;"><strong>John Anderson</strong> completed Leg Day workout</p>
+              <div class="timeline-time">Today at 5:30 PM</div>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-dot">📝</div>
+            <div class="timeline-content">
+              <p style="margin-bottom: 0.25rem;"><strong>Maria Garcia</strong> updated weight: 62kg</p>
+              <div class="timeline-time">Today at 3:45 PM</div>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-dot">✓</div>
+            <div class="timeline-content">
+              <p style="margin-bottom: 0.25rem;"><strong>Emily Brown</strong> completed Upper Body workout</p>
+              <div class="timeline-time">Today at 2:15 PM</div>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-dot">📝</div>
+            <div class="timeline-content">
+              <p style="margin-bottom: 0.25rem;"><strong>David Lee</strong> updated progress notes</p>
+              <div class="timeline-time">Yesterday at 6:00 PM</div>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-dot">✓</div>
+            <div class="timeline-content">
+              <p style="margin-bottom: 0.25rem;"><strong>Jessica Taylor</strong> completed Cardio session</p>
+              <div class="timeline-time">Yesterday at 4:30 PM</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

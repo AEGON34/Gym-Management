@@ -1,0 +1,403 @@
+/* ===================================
+   GYM MANAGEMENT SYSTEM - PRINT STYLES
+   =================================== */
+
+@media print {
+  /* ==================== 
+     HIDE ELEMENTS FOR PRINT 
+     ==================== */
+  nav,
+  .sidebar,
+  .topbar,
+  .main-content::before,
+  button,
+  .button,
+  .btn,
+  .no-print,
+  .hide-print,
+  footer {
+    display: none !important;
+  }
+
+  /* ==================== 
+     PAGE LAYOUT 
+     ==================== */
+  body {
+    margin: 0;
+    padding: 20px;
+    background: white;
+    color: black;
+  }
+
+  .main-content {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  /* ==================== 
+     TYPOGRAPHY 
+     ==================== */
+  h1,
+  h2,
+  h3,
+  h4 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* ==================== 
+     LINKS 
+     ==================== */
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  /* ==================== 
+     CARDS AND BOXES 
+     ==================== */
+  .card {
+    page-break-inside: avoid;
+    border: 1px solid black;
+    box-shadow: none;
+    page-break-after: auto;
+  }
+
+  /* ==================== 
+     TABLES 
+     ==================== */
+  table {
+    page-break-inside: avoid;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+
+  th {
+    background-color: #ddd;
+    font-weight: bold;
+    padding: 8px;
+  }
+
+  td {
+    padding: 8px;
+  }
+
+  tbody tr:hover {
+    background-color: transparent;
+  }
+
+  /* ==================== 
+     IMAGES 
+     ==================== */
+  img {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+
+  /* ==================== 
+     PAGE BREAKS 
+     ==================== */
+  .page-break {
+    page-break-after: always;
+  }
+
+  .page-break-inside-avoid {
+    page-break-inside: avoid;
+  }
+
+  /* ==================== 
+     GRID AND FLEX ADJUSTMENTS 
+     ==================== */
+  .grid,
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .flex-between {
+    flex-direction: column;
+  }
+
+  /* ==================== 
+     BADGES AND PILLS 
+     ==================== */
+  .badge {
+    border: 1px solid black;
+    background-color: transparent;
+    color: black;
+  }
+
+  /* ==================== 
+     FORM ELEMENTS 
+     ==================== */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="number"],
+  textarea,
+  select {
+    border: 1px solid black;
+    background: white;
+    color: black;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* ==================== 
+     PROGRESS BARS 
+     ==================== */
+  .progress-bar {
+    border: 1px solid black;
+  }
+
+  .progress-fill {
+    background: black;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* ==================== 
+     COLORS - ENSURE READABILITY 
+     ==================== */
+  * {
+    color: black !important;
+    background-color: transparent !important;
+  }
+
+  a {
+    color: black !important;
+  }
+
+  .badge {
+    color: black !important;
+  }
+
+  /* ==================== 
+     UTILITY CLASSES FOR PRINT 
+     ==================== */
+  .print-section {
+    page-break-after: always;
+  }
+
+  .print-column-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .print-hidden {
+    display: none;
+  }
+
+  .print-visible {
+    display: block !important;
+  }
+
+  /* ==================== 
+     WORKOUT PLAN SPECIFIC 
+     ==================== */
+  .workout-section {
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+  }
+
+  .exercise-item {
+    page-break-inside: avoid;
+    margin-bottom: 15px;
+  }
+
+  /* ==================== 
+     MARGIN AND PADDING ADJUSTMENTS 
+     ==================== */
+  body {
+    margin: 0;
+  }
+
+  .container {
+    margin: 0;
+  }
+
+  .section {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    margin-bottom: 15px;
+  }
+
+  /* ==================== 
+     SIDEBAR AND MAIN CONTENT ADJUSTMENTS 
+     ==================== */
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* ==================== 
+     STAT CARDS 
+     ==================== */
+  .stat-card {
+    page-break-inside: avoid;
+    border-left: 2px solid black;
+  }
+
+  /* ==================== 
+     TIMELINE 
+     ==================== */
+  .timeline-item {
+    page-break-inside: avoid;
+  }
+
+  /* ==================== 
+     SPECIFIC PAGE ADJUSTMENTS 
+     ==================== */
+  /* Workout plan print format */
+  .workout-plan {
+    page-break-inside: avoid;
+  }
+
+  .meal-item {
+    page-break-inside: avoid;
+  }
+
+  /* ==================== 
+     REMOVE SHADOWS AND EFFECTS 
+     ==================== */
+  .shadow,
+  .shadow-lg {
+    box-shadow: none !important;
+  }
+
+  .card {
+    box-shadow: none !important;
+  }
+
+  /* ==================== 
+     MAINTAIN BORDERS FOR CLARITY 
+     ==================== */
+  .border {
+    border: 1px solid black !important;
+  }
+
+  .border-top {
+    border-top: 1px solid black !important;
+  }
+
+  .border-bottom {
+    border-bottom: 1px solid black !important;
+  }
+
+  /* ==================== 
+     PROFILE CIRCLES 
+     ==================== */
+  .profile-circle {
+    border: 1px solid black;
+  }
+
+  /* ==================== 
+     PRINT SIZE ADJUSTMENTS 
+     ==================== */
+  @page {
+    size: A4;
+    margin: 2cm;
+  }
+
+  @page :first {
+    margin-top: 2cm;
+  }
+
+  /* ==================== 
+     HEADINGS - AVOID ORPHANS AND WIDOWS 
+     ==================== */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+    page-break-before: avoid;
+  }
+
+  /* ==================== 
+     LIST ADJUSTMENTS 
+     ==================== */
+  ul,
+  ol {
+    page-break-inside: avoid;
+  }
+
+  li {
+    page-break-inside: avoid;
+  }
+
+  /* ==================== 
+     VISIBILITY OF KEY CONTENT 
+     ==================== */
+  .workout-list,
+  .member-list,
+  .trainer-list {
+    page-break-inside: avoid;
+  }
+
+  /* ==================== 
+     PRINT OPTIMIZED COLORS 
+     ==================== */
+  .badge-primary,
+  .badge-success,
+  .badge-danger,
+  .badge-warning,
+  .badge-secondary {
+    background-color: transparent !important;
+    border: 1px solid black;
+    color: black !important;
+  }
+
+  .status-dot {
+    border: 1px solid black;
+  }
+
+  .status-dot.active {
+    background-color: black;
+  }
+
+  .status-dot.inactive {
+    background-color: #ccc;
+  }
+}

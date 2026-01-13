@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout Day - PowerFit Gym</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="print.css">
+</head>
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">🏋️ PowerFit Gym</div>
+      <ul class="nav-links">
+        <li><a href="member-dashboard.html">Dashboard</a></li>
+        <li><a href="member-workout-day.html">My Workouts</a></li>
+        <li><a href="member-progress.html">Progress</a></li>
+        <li><a href="member-chat.html">Chat</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main style="margin-top: 0;">
+    <div class="container" style="padding: 2rem 1rem;">
+      <!-- BACK BUTTON & HEADER -->
+      <div style="margin-bottom: 2rem;">
+        <a href="member-dashboard.html" style="color: #3b82f6; text-decoration: none; font-weight: 600;">← Back to Dashboard</a>
+        <h1 style="margin-top: 0.5rem;">Monday - Push Day</h1>
+        
+        <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1rem; padding: 1rem; background-color: #f0fdf4; border-radius: 8px; border-left: 4px solid #10b981;">
+          <span style="font-size: 1.5rem;">✓</span>
+          <div>
+            <p style="font-weight: 600; margin-bottom: 0.25rem;">Completion Status</p>
+            <p style="color: #6b7280; margin-bottom: 0;">3 of 6 exercises completed</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXERCISES -->
+      <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+        <!-- Exercise 1: COMPLETED -->
+        <div class="card" style="border-left: 4px solid #10b981; opacity: 0.8;">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+            <h3 style="margin-bottom: 0;">1. Bench Press</h3>
+            <span style="color: #10b981; font-weight: 600;">✓ Completed</span>
+          </div>
+          
+          <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">Target: 4 sets × 8-10 reps @ 80kg</p>
+          
+          <div style="margin-bottom: 1.5rem; overflow-x: auto;">
+            <table style="background-color: transparent; border: none;">
+              <thead>
+                <tr style="background-color: #f9fafb;">
+                  <th style="padding: 8px; border: 1px solid #e5e7eb;">Set</th>
+                  <th style="padding: 8px; border: 1px solid #e5e7eb;">Reps</th>
+                  <th style="padding: 8px; border: 1px solid #e5e7eb;">Weight</th>
+                  <th style="padding: 8px; border: 1px solid #e5e7eb;">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;">1</td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="10" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="80" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="checkbox" checked></td>
+                </tr>
+                <tr style="background-color: #f9fafb;">
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;">2</td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="10" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="80" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="checkbox" checked></td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;">3</td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="9" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="80" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="checkbox" checked></td>
+                </tr>
+                <tr style="background-color: #f9fafb;">
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;">4</td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="8" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="80" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="checkbox" checked></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="form-group">
+            <label for="notes1">Notes</label>
+            <textarea id="notes1" placeholder="How did this exercise feel?" style="height: 80px;">Great form, felt strong</textarea>
+          </div>
+        </div>
+
+        <!-- Exercise 2: COMPLETED -->
+        <div class="card" style="border-left: 4px solid #10b981; opacity: 0.8;">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+            <h3 style="margin-bottom: 0;">2. Incline Dumbbell Press</h3>
+            <span style="color: #10b981; font-weight: 600;">✓ Completed</span>
+          </div>
+          
+          <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">Target: 3 sets × 10-12 reps @ 30kg</p>
+          
+          <div style="margin-bottom: 1.5rem; overflow-x: auto;">
+            <table style="background-color: transparent; border: none;">
+              <thead>
+                <tr style="background-color: #f9fafb;">
+                  <th style="padding: 8px; border: 1px solid #e5e7eb;">Set</th>
+                  <th style="padding: 8px; border: 1px solid #e5e7eb;">Reps</th>
+                  <th style="padding: 8px; border: 1px solid #e5e7eb;">Weight</th>
+                  <th style="padding: 8px; border: 1px solid #e5e7eb;">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;">1</td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="12" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="30" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="checkbox" checked></td>
+                </tr>
+                <tr style="background-color: #f9fafb;">
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;">2</td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="11" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="30" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="checkbox" checked></td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;">3</td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="10" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="30" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="checkbox" checked></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="form-group">
+            <label for="notes2">Notes</label>
+            <textarea id="notes2" placeholder="How did this exercise feel?" style="height: 80px;">Good pump, controlled movement</textarea>
+          </div>
+        </div>
+
+        <!-- Exercise 3: COMPLETED -->
+        <div class="card" style="border-left: 4px solid #10b981; opacity: 0.8;">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+            <h3 style="margin-bottom: 0;">3. Cable Flyes</h3>
+            <span style="color: #10b981; font-weight: 600;">✓ Completed</span>
+          </div>
+          
+          <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">Target: 3 sets × 12-15 reps @ 20kg</p>
+          
+          <div style="margin-bottom: 1.5rem; overflow-x: auto;">
+            <table style="background-color: transparent; border: none;">
+              <thead>
+                <tr style="background-color: #f9fafb;">
+                  <th style="padding: 8px; border: 1px solid #e5e7eb;">Set</th>
+                  <th style="padding: 8px; border: 1px solid #e5e7eb;">Reps</th>
+                  <th style="padding: 8px; border: 1px solid #e5e7eb;">Weight</th>
+                  <th style="padding: 8px; border: 1px solid #e5e7eb;">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;">1</td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="15" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="20" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="checkbox" checked></td>
+                </tr>
+                <tr style="background-color: #f9fafb;">
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;">2</td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="14" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="20" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="checkbox" checked></td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;">3</td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="13" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="20" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="checkbox" checked></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="form-group">
+            <label for="notes3">Notes</label>
+            <textarea id="notes3" placeholder="How did this exercise feel?" style="height: 80px;">Great stretch and squeeze</textarea>
+          </div>
+        </div>
+
+        <!-- Exercise 4: IN PROGRESS -->
+        <div class="card" style="border-left: 4px solid #3b82f6;">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+            <h3 style="margin-bottom: 0;">4. Overhead Press</h3>
+            <span style="color: #3b82f6; font-weight: 600;">In Progress</span>
+          </div>
+          
+          <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">Target: 3 sets × 8-10 reps @ 50kg</p>
+          
+          <div style="margin-bottom: 1.5rem; overflow-x: auto;">
+            <table style="background-color: transparent; border: none;">
+              <thead>
+                <tr style="background-color: #f9fafb;">
+                  <th style="padding: 8px; border: 1px solid #e5e7eb;">Set</th>
+                  <th style="padding: 8px; border: 1px solid #e5e7eb;">Reps</th>
+                  <th style="padding: 8px; border: 1px solid #e5e7eb;">Weight</th>
+                  <th style="padding: 8px; border: 1px solid #e5e7eb;">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;">1</td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="10" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="50" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="checkbox" checked></td>
+                </tr>
+                <tr style="background-color: #f9fafb;">
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;">2</td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="50" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="checkbox"></td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;">3</td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="number" value="50" style="width: 80%; padding: 4px;"></td>
+                  <td style="padding: 8px; border: 1px solid #e5e7eb;"><input type="checkbox"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="padding: 1rem; background-color: #eff6ff; border-radius: 6px; margin-bottom: 1.5rem;">
+            <p style="font-weight: 600; color: #3b82f6; margin-bottom: 0;">⏱️ Rest: 90 seconds</p>
+          </div>
+
+          <div class="form-group">
+            <label for="notes4">Notes</label>
+            <textarea id="notes4" placeholder="How did this exercise feel?" style="height: 80px;"></textarea>
+          </div>
+        </div>
+
+        <!-- Exercise 5: PENDING -->
+        <div class="card" style="border-left: 4px solid #e5e7eb; opacity: 0.6;">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+            <h3 style="margin-bottom: 0;">5. Lateral Raise</h3>
+            <span style="color: #6b7280; font-weight: 600;">Pending</span>
+          </div>
+          
+          <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">Target: 3 sets × 12-15 reps @ 15kg</p>
+        </div>
+
+        <!-- Exercise 6: PENDING -->
+        <div class="card" style="border-left: 4px solid #e5e7eb; opacity: 0.6;">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+            <h3 style="margin-bottom: 0;">6. Tricep Dips</h3>
+            <span style="color: #6b7280; font-weight: 600;">Pending</span>
+          </div>
+          
+          <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">Target: 3 sets × 10-12 reps</p>
+        </div>
+      </div>
+
+      <!-- BOTTOM ACTIONS -->
+      <div style="display: flex; gap: 1rem; margin-top: 2rem; margin-bottom: 2rem;">
+        <button class="btn btn-success btn-lg btn-block">✓ Complete Workout</button>
+        <button class="btn btn-primary btn-lg btn-block">Save Progress</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

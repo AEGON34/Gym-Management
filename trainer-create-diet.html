@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Diet Plan - PowerFit Gym</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="print.css">
+</head>
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">🏋️ PowerFit Gym</div>
+      <ul class="nav-links">
+        <li><a href="trainer-dashboard.html">Dashboard</a></li>
+        <li><a href="#">My Members</a></li>
+        <li><a href="#">Schedule</a></li>
+        <li><a href="member-chat.html">Messages</a></li>
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SIDEBAR NAVIGATION -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">PowerFit</div>
+    <ul class="sidebar-menu">
+      <li class="sidebar-item">
+        <a href="trainer-dashboard.html" class="sidebar-link">📊 Dashboard</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="#" class="sidebar-link">👥 My Members</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="trainer-create-workout.html" class="sidebar-link">🏋️ Create Workout</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="trainer-create-diet.html" class="sidebar-link active">🥗 Create Diet</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="trainer-log-progress.html" class="sidebar-link">📈 Log Progress</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="member-chat.html" class="sidebar-link">💬 Messages</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="index.html" class="sidebar-link">🚪 Logout</a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="flex-between">
+        <div class="breadcrumb">
+          <a href="trainer-dashboard.html">Dashboard</a> / <span>Create Diet Plan</span>
+        </div>
+        <div class="flex" style="gap: 1rem;">
+          <div class="profile-circle sm">💪</div>
+          <div>
+            <div style="font-weight: 600; font-size: 0.875rem;">John Smith</div>
+            <div style="font-size: 0.75rem; color: #6b7280;">Nutrition Specialist</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Create Diet Plan</h1>
+      
+      <div class="card" style="max-width: 1000px;">
+        <form>
+          <!-- MEMBER SELECTION -->
+          <div class="form-section">
+            <h3>Select Member</h3>
+            <div class="form-row form-row-2" style="margin-bottom: 1rem;">
+              <div>
+                <label for="member">Assign to Member</label>
+                <select id="member" name="member" required>
+                  <option value="">Select Member</option>
+                  <option value="john">John Anderson - Pro Member</option>
+                  <option value="sarah">Sarah Williams - Premium Member</option>
+                  <option value="michael">Michael Davis - Basic Member</option>
+                  <option value="emily">Emily Brown - Pro Member</option>
+                  <option value="david">David Lee - Premium Member</option>
+                  <option value="jessica">Jessica Taylor - Basic Member</option>
+                </select>
+              </div>
+              <div>
+                <label for="plan-name">Diet Plan Name</label>
+                <input type="text" id="plan-name" name="plan-name" placeholder="e.g., Weight Loss Plan" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- CALORIE & MACRO TARGETS -->
+          <div class="form-section">
+            <h3>Daily Nutritional Targets</h3>
+            <div class="form-row form-row-4" style="margin-bottom: 1rem;">
+              <div>
+                <label for="calories">Daily Calories (kcal)</label>
+                <input type="number" id="calories" name="calories" placeholder="2500" required>
+              </div>
+              <div>
+                <label for="protein">Protein (g)</label>
+                <input type="number" id="protein" name="protein" placeholder="175">
+              </div>
+              <div>
+                <label for="carbs">Carbohydrates (g)</label>
+                <input type="number" id="carbs" name="carbs" placeholder="312">
+              </div>
+              <div>
+                <label for="fats">Fats (g)</label>
+                <input type="number" id="fats" name="fats" placeholder="83">
+              </div>
+            </div>
+
+            <div class="form-row form-row-3" style="margin-bottom: 1rem;">
+              <div>
+                <label for="goal">Fitness Goal</label>
+                <select id="goal" name="goal">
+                  <option value="">Select Goal</option>
+                  <option value="weight-loss">Weight Loss</option>
+                  <option value="muscle-gain">Muscle Gain</option>
+                  <option value="maintenance">Maintenance</option>
+                  <option value="endurance">Endurance Training</option>
+                  <option value="strength">Strength Building</option>
+                </select>
+              </div>
+              <div>
+                <label for="duration">Plan Duration</label>
+                <select id="duration" name="duration">
+                  <option value="4">4 Weeks</option>
+                  <option value="8" selected>8 Weeks</option>
+                  <option value="12">12 Weeks</option>
+                  <option value="16">16 Weeks</option>
+                </select>
+              </div>
+              <div>
+                <label for="meals-per-day">Meals Per Day</label>
+                <select id="meals-per-day" name="meals-per-day">
+                  <option value="3">3 Meals</option>
+                  <option value="4">4 Meals</option>
+                  <option value="5" selected>5 Meals</option>
+                  <option value="6">6 Meals</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- BREAKFAST -->
+          <div class="form-section">
+            <h3>🥗 Breakfast (7:00 AM)</h3>
+            <div class="card card-no-hover" style="background-color: #f9fafb; margin-bottom: 1rem;">
+              <div class="form-row form-row-3" style="margin-bottom: 1rem;">
+                <div>
+                  <label>Food Item</label>
+                  <input type="text" placeholder="e.g., Oatmeal" value="Oatmeal">
+                </div>
+                <div>
+                  <label>Quantity</label>
+                  <input type="text" placeholder="e.g., 50g" value="50g">
+                </div>
+                <div>
+                  <label>Calories</label>
+                  <input type="number" placeholder="150" value="150">
+                </div>
+              </div>
+              <div class="form-row form-row-3" style="margin-bottom: 1rem;">
+                <div>
+                  <label>Food Item</label>
+                  <input type="text" placeholder="e.g., Berries" value="Mixed Berries">
+                </div>
+                <div>
+                  <label>Quantity</label>
+                  <input type="text" placeholder="e.g., 100g" value="100g">
+                </div>
+                <div>
+                  <label>Calories</label>
+                  <input type="number" placeholder="50" value="50">
+                </div>
+              </div>
+              <div class="form-row form-row-3" style="margin-bottom: 1rem;">
+                <div>
+                  <label>Food Item</label>
+                  <input type="text" placeholder="e.g., Eggs" value="Scrambled Eggs">
+                </div>
+                <div>
+                  <label>Quantity</label>
+                  <input type="text" placeholder="e.g., 3 eggs" value="3 eggs">
+                </div>
+                <div>
+                  <label>Calories</label>
+                  <input type="number" placeholder="210" value="210">
+                </div>
+              </div>
+              <button type="button" class="btn btn-sm btn-outline">+ Add Food Item</button>
+            </div>
+            <p style="font-size: 0.875rem; color: #6b7280;"><strong>Meal Total:</strong> 410 kcal</p>
+          </div>
+
+          <!-- MORNING SNACK -->
+          <div class="form-section">
+            <h3>🍌 Morning Snack (10:00 AM)</h3>
+            <div class="card card-no-hover" style="background-color: #f9fafb; margin-bottom: 1rem;">
+              <div class="form-row form-row-3" style="margin-bottom: 1rem;">
+                <div>
+                  <label>Food Item</label>
+                  <input type="text" placeholder="e.g., Protein Shake" value="Protein Shake">
+                </div>
+                <div>
+                  <label>Quantity</label>
+                  <input type="text" placeholder="e.g., 1 scoop" value="1 scoop + milk">
+                </div>
+                <div>
+                  <label>Calories</label>
+                  <input type="number" placeholder="200" value="200">
+                </div>
+              </div>
+              <div class="form-row form-row-3" style="margin-bottom: 1rem;">
+                <div>
+                  <label>Food Item</label>
+                  <input type="text" placeholder="e.g., Banana" value="Banana">
+                </div>
+                <div>
+                  <label>Quantity</label>
+                  <input type="text" placeholder="e.g., 1 medium" value="1 medium">
+                </div>
+                <div>
+                  <label>Calories</label>
+                  <input type="number" placeholder="100" value="100">
+                </div>
+              </div>
+              <button type="button" class="btn btn-sm btn-outline">+ Add Food Item</button>
+            </div>
+            <p style="font-size: 0.875rem; color: #6b7280;"><strong>Meal Total:</strong> 300 kcal</p>
+          </div>
+
+          <!-- LUNCH -->
+          <div class="form-section">
+            <h3>🍗 Lunch (1:00 PM)</h3>
+            <div class="card card-no-hover" style="background-color: #f9fafb; margin-bottom: 1rem;">
+              <div class="form-row form-row-3" style="margin-bottom: 1rem;">
+                <div>
+                  <label>Food Item</label>
+                  <input type="text" placeholder="e.g., Grilled Chicken" value="Grilled Chicken Breast">
+                </div>
+                <div>
+                  <label>Quantity</label>
+                  <input type="text" placeholder="e.g., 150g" value="200g">
+                </div>
+                <div>
+                  <label>Calories</label>
+                  <input type="number" placeholder="300" value="330">
+                </div>
+              </div>
+              <div class="form-row form-row-3" style="margin-bottom: 1rem;">
+                <div>
+                  <label>Food Item</label>
+                  <input type="text" placeholder="e.g., Brown Rice" value="Brown Rice">
+                </div>
+                <div>
+                  <label>Quantity</label>
+                  <input type="text" placeholder="e.g., 150g" value="150g (cooked)">
+                </div>
+                <div>
+                  <label>Calories</label>
+                  <input type="number" placeholder="180" value="180">
+                </div>
+              </div>
+              <div class="form-row form-row-3" style="margin-bottom: 1rem;">
+                <div>
+                  <label>Food Item</label>
+                  <input type="text" placeholder="e.g., Vegetables" value="Mixed Vegetables">
+                </div>
+                <div>
+                  <label>Quantity</label>
+                  <input type="text" placeholder="e.g., 200g" value="200g">
+                </div>
+                <div>
+                  <label>Calories</label>
+                  <input type="number" placeholder="80" value="80">
+                </div>
+              </div>
+              <button type="button" class="btn btn-sm btn-outline">+ Add Food Item</button>
+            </div>
+            <p style="font-size: 0.875rem; color: #6b7280;"><strong>Meal Total:</strong> 590 kcal</p>
+          </div>
+
+          <!-- AFTERNOON SNACK -->
+          <div class="form-section">
+            <h3>🥜 Afternoon Snack (4:00 PM)</h3>
+            <div class="card card-no-hover" style="background-color: #f9fafb; margin-bottom: 1rem;">
+              <div class="form-row form-row-3" style="margin-bottom: 1rem;">
+                <div>
+                  <label>Food Item</label>
+                  <input type="text" placeholder="e.g., Greek Yogurt" value="Greek Yogurt">
+                </div>
+                <div>
+                  <label>Quantity</label>
+                  <input type="text" placeholder="e.g., 150g" value="150g">
+                </div>
+                <div>
+                  <label>Calories</label>
+                  <input type="number" placeholder="130" value="130">
+                </div>
+              </div>
+              <div class="form-row form-row-3" style="margin-bottom: 1rem;">
+                <div>
+                  <label>Food Item</label>
+                  <input type="text" placeholder="e.g., Almonds" value="Almonds">
+                </div>
+                <div>
+                  <label>Quantity</label>
+                  <input type="text" placeholder="e.g., 30g" value="30g">
+                </div>
+                <div>
+                  <label>Calories</label>
+                  <input type="number" placeholder="170" value="170">
+                </div>
+              </div>
+              <button type="button" class="btn btn-sm btn-outline">+ Add Food Item</button>
+            </div>
+            <p style="font-size: 0.875rem; color: #6b7280;"><strong>Meal Total:</strong> 300 kcal</p>
+          </div>
+
+          <!-- DINNER -->
+          <div class="form-section">
+            <h3>🍣 Dinner (7:00 PM)</h3>
+            <div class="card card-no-hover" style="background-color: #f9fafb; margin-bottom: 1rem;">
+              <div class="form-row form-row-3" style="margin-bottom: 1rem;">
+                <div>
+                  <label>Food Item</label>
+                  <input type="text" placeholder="e.g., Salmon" value="Grilled Salmon">
+                </div>
+                <div>
+                  <label>Quantity</label>
+                  <input type="text" placeholder="e.g., 180g" value="180g">
+                </div>
+                <div>
+                  <label>Calories</label>
+                  <input type="number" placeholder="350" value="350">
+                </div>
+              </div>
+              <div class="form-row form-row-3" style="margin-bottom: 1rem;">
+                <div>
+                  <label>Food Item</label>
+                  <input type="text" placeholder="e.g., Sweet Potato" value="Sweet Potato">
+                </div>
+                <div>
+                  <label>Quantity</label>
+                  <input type="text" placeholder="e.g., 150g" value="150g">
+                </div>
+                <div>
+                  <label>Calories</label>
+                  <input type="number" placeholder="130" value="130">
+                </div>
+              </div>
+              <div class="form-row form-row-3" style="margin-bottom: 1rem;">
+                <div>
+                  <label>Food Item</label>
+                  <input type="text" placeholder="e.g., Broccoli" value="Steamed Broccoli">
+                </div>
+                <div>
+                  <label>Quantity</label>
+                  <input type="text" placeholder="e.g., 200g" value="200g">
+                </div>
+                <div>
+                  <label>Calories</label>
+                  <input type="number" placeholder="70" value="70">
+                </div>
+              </div>
+              <button type="button" class="btn btn-sm btn-outline">+ Add Food Item</button>
+            </div>
+            <p style="font-size: 0.875rem; color: #6b7280;"><strong>Meal Total:</strong> 550 kcal</p>
+          </div>
+
+          <!-- DIETARY NOTES -->
+          <div class="form-section">
+            <h3>Additional Notes</h3>
+            <div class="form-group" style="margin-bottom: 1rem;">
+              <label for="dietary-restrictions">Dietary Restrictions / Allergies</label>
+              <textarea id="dietary-restrictions" name="dietary-restrictions" rows="2" placeholder="e.g., Lactose intolerant, No shellfish, Vegetarian options needed"></textarea>
+            </div>
+            <div class="form-group" style="margin-bottom: 1rem;">
+              <label for="supplements">Recommended Supplements</label>
+              <textarea id="supplements" name="supplements" rows="2" placeholder="e.g., Whey Protein post-workout, Multivitamin in the morning, Fish Oil with dinner"></textarea>
+            </div>
+            <div class="form-group" style="margin-bottom: 1rem;">
+              <label for="hydration">Hydration Goals</label>
+              <input type="text" id="hydration" name="hydration" placeholder="e.g., 3 liters of water daily" value="Drink at least 3 liters of water daily">
+            </div>
+          </div>
+
+          <!-- SUMMARY -->
+          <div class="card card-no-hover" style="background-color: #f0f9ff; border-left: 4px solid #3b82f6; margin-bottom: 2rem;">
+            <h4 style="margin-bottom: 1rem;">📊 Daily Summary</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem;">
+              <div>
+                <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.25rem;">Total Calories</p>
+                <p style="font-size: 1.5rem; font-weight: bold; color: #3b82f6; margin-bottom: 0;">2,150 kcal</p>
+              </div>
+              <div>
+                <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.25rem;">Protein</p>
+                <p style="font-size: 1.5rem; font-weight: bold; color: #ef4444; margin-bottom: 0;">~175g</p>
+              </div>
+              <div>
+                <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.25rem;">Carbs</p>
+                <p style="font-size: 1.5rem; font-weight: bold; color: #f59e0b; margin-bottom: 0;">~250g</p>
+              </div>
+              <div>
+                <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.25rem;">Fats</p>
+                <p style="font-size: 1.5rem; font-weight: bold; color: #10b981; margin-bottom: 0;">~70g</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ACTION BUTTONS -->
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <button type="submit" class="btn btn-primary btn-lg">Save Diet Plan</button>
+            <button type="button" class="btn btn-secondary btn-lg">Save as Template</button>
+            <a href="trainer-member-details.html" class="btn btn-outline btn-lg">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

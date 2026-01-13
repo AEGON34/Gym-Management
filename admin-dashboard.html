@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - PowerFit Gym</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="print.css">
+</head>
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">🏋️ PowerFit Gym</div>
+      <ul class="nav-links">
+        <li><a href="admin-dashboard.html">Dashboard</a></li>
+        <li><a href="#">Members</a></li>
+        <li><a href="#">Trainers</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SIDEBAR NAVIGATION -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">PowerFit</div>
+    <ul class="sidebar-menu">
+      <li class="sidebar-item">
+        <a href="admin-dashboard.html" class="sidebar-link active">📊 Dashboard</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="#" class="sidebar-link">👥 Members</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="#" class="sidebar-link">🏋️ Trainers</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-add-member.html" class="sidebar-link">➕ Add Member</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-add-trainer.html" class="sidebar-link">➕ Add Trainer</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-reports.html" class="sidebar-link">📈 Reports</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="#" class="sidebar-link">⚙️ Settings</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="login.html" class="sidebar-link">🚪 Logout</a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="flex-between">
+        <div class="breadcrumb">
+          <a href="admin-dashboard.html">Dashboard</a>
+        </div>
+        <div class="flex" style="gap: 1rem;">
+          <div class="profile-circle sm">👤</div>
+          <div>
+            <div style="font-weight: 600; font-size: 0.875rem;">Admin User</div>
+            <div style="font-size: 0.75rem; color: #6b7280;">System Administrator</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- STATS CARDS ROW -->
+      <div class="grid-4" style="margin-bottom: 3rem;">
+        <div class="stat-card">
+          <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">👥</div>
+          <div class="stat-number">156</div>
+          <div class="stat-label">Total Members</div>
+        </div>
+        <div class="stat-card success">
+          <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">🏋️</div>
+          <div class="stat-number">12</div>
+          <div class="stat-label">Active Trainers</div>
+        </div>
+        <div class="stat-card warning">
+          <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">📅</div>
+          <div class="stat-number">48</div>
+          <div class="stat-label">Today's Check-ins</div>
+        </div>
+        <div class="stat-card info">
+          <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">💰</div>
+          <div class="stat-number">$12,450</div>
+          <div class="stat-label">Monthly Revenue</div>
+        </div>
+      </div>
+
+      <!-- MEMBERS SECTION -->
+      <h2 style="margin-bottom: 1.5rem;">Recent Members</h2>
+      <div class="grid-3" style="margin-bottom: 3rem;">
+        <!-- Member 1 -->
+        <div class="card">
+          <div class="text-center">
+            <div class="profile-circle lg">👨</div>
+            <h4>John Anderson</h4>
+            <span class="badge badge-primary" style="margin-bottom: 1rem; display: inline-block;">Pro Member</span>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem;">john@email.com</p>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">Joined: Jan 2026</p>
+            <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+              <span class="status-dot active"></span>
+              <span style="font-size: 0.875rem; color: #6b7280;">Active</span>
+            </div>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="trainer-member-details.html" class="btn btn-sm btn-primary" style="flex: 1;">View</a>
+              <a href="admin-add-member.html" class="btn btn-sm btn-outline" style="flex: 1;">Edit</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 2 -->
+        <div class="card">
+          <div class="text-center">
+            <div class="profile-circle lg">👩</div>
+            <h4>Sarah Williams</h4>
+            <span class="badge badge-success" style="margin-bottom: 1rem; display: inline-block;">Premium Member</span>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem;">sarah@email.com</p>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">Joined: Dec 2025</p>
+            <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+              <span class="status-dot active"></span>
+              <span style="font-size: 0.875rem; color: #6b7280;">Active</span>
+            </div>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="trainer-member-details.html" class="btn btn-sm btn-primary" style="flex: 1;">View</a>
+              <a href="admin-add-member.html" class="btn btn-sm btn-outline" style="flex: 1;">Edit</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="card">
+          <div class="text-center">
+            <div class="profile-circle lg">👨‍🦱</div>
+            <h4>Michael Davis</h4>
+            <span class="badge badge-primary" style="margin-bottom: 1rem; display: inline-block;">Basic Member</span>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem;">michael@email.com</p>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">Joined: Nov 2025</p>
+            <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+              <span class="status-dot inactive"></span>
+              <span style="font-size: 0.875rem; color: #6b7280;">Inactive</span>
+            </div>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="trainer-member-details.html" class="btn btn-sm btn-primary" style="flex: 1;">View</a>
+              <a href="admin-add-member.html" class="btn btn-sm btn-outline" style="flex: 1;">Edit</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 4 -->
+        <div class="card">
+          <div class="text-center">
+            <div class="profile-circle lg">👩‍🦰</div>
+            <h4>Emily Brown</h4>
+            <span class="badge badge-primary" style="margin-bottom: 1rem; display: inline-block;">Pro Member</span>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem;">emily@email.com</p>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">Joined: Oct 2025</p>
+            <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+              <span class="status-dot active"></span>
+              <span style="font-size: 0.875rem; color: #6b7280;">Active</span>
+            </div>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="trainer-member-details.html" class="btn btn-sm btn-primary" style="flex: 1;">View</a>
+              <a href="admin-add-member.html" class="btn btn-sm btn-outline" style="flex: 1;">Edit</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 5 -->
+        <div class="card">
+          <div class="text-center">
+            <div class="profile-circle lg">👨‍💼</div>
+            <h4>David Lee</h4>
+            <span class="badge badge-success" style="margin-bottom: 1rem; display: inline-block;">Premium Member</span>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem;">david@email.com</p>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">Joined: Sep 2025</p>
+            <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+              <span class="status-dot active"></span>
+              <span style="font-size: 0.875rem; color: #6b7280;">Active</span>
+            </div>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="trainer-member-details.html" class="btn btn-sm btn-primary" style="flex: 1;">View</a>
+              <a href="admin-add-member.html" class="btn btn-sm btn-outline" style="flex: 1;">Edit</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 6 -->
+        <div class="card">
+          <div class="text-center">
+            <div class="profile-circle lg">👩‍🦳</div>
+            <h4>Jessica Taylor</h4>
+            <span class="badge badge-primary" style="margin-bottom: 1rem; display: inline-block;">Basic Member</span>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem;">jessica@email.com</p>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">Joined: Aug 2025</p>
+            <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+              <span class="status-dot active"></span>
+              <span style="font-size: 0.875rem; color: #6b7280;">Active</span>
+            </div>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="trainer-member-details.html" class="btn btn-sm btn-primary" style="flex: 1;">View</a>
+              <a href="admin-add-member.html" class="btn btn-sm btn-outline" style="flex: 1;">Edit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRAINERS SECTION -->
+      <h2 style="margin-bottom: 1.5rem;">Our Trainers</h2>
+      <div class="grid-3">
+        <!-- Trainer 1 -->
+        <div class="card">
+          <div class="text-center">
+            <div class="profile-circle lg">💪</div>
+            <h4>John Smith</h4>
+            <span class="badge badge-primary" style="margin-bottom: 1rem; display: inline-block;">Strength Training</span>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem;">Members: 8</p>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">8 years experience</p>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="trainer-dashboard.html" class="btn btn-sm btn-primary" style="flex: 1;">View Schedule</a>
+              <a href="admin-add-trainer.html" class="btn btn-sm btn-outline" style="flex: 1;">Edit</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trainer 2 -->
+        <div class="card">
+          <div class="text-center">
+            <div class="profile-circle lg">🏃</div>
+            <h4>Sarah Johnson</h4>
+            <span class="badge badge-success" style="margin-bottom: 1rem; display: inline-block;">Cardio & Endurance</span>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem;">Members: 6</p>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">6 years experience</p>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="trainer-dashboard.html" class="btn btn-sm btn-primary" style="flex: 1;">View Schedule</a>
+              <a href="admin-add-trainer.html" class="btn btn-sm btn-outline" style="flex: 1;">Edit</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trainer 3 -->
+        <div class="card">
+          <div class="text-center">
+            <div class="profile-circle lg">🧘</div>
+            <h4>Michael Chen</h4>
+            <span class="badge badge-warning" style="margin-bottom: 1rem; display: inline-block;">Yoga & Flexibility</span>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem;">Members: 10</p>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">10 years experience</p>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="trainer-dashboard.html" class="btn btn-sm btn-primary" style="flex: 1;">View Schedule</a>
+              <a href="admin-add-trainer.html" class="btn btn-sm btn-outline" style="flex: 1;">Edit</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trainer 4 -->
+        <div class="card">
+          <div class="text-center">
+            <div class="profile-circle lg">🤸</div>
+            <h4>Emma Wilson</h4>
+            <span class="badge badge-primary" style="margin-bottom: 1rem; display: inline-block;">Group Fitness</span>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem;">Members: 7</p>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">5 years experience</p>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="trainer-dashboard.html" class="btn btn-sm btn-primary" style="flex: 1;">View Schedule</a>
+              <a href="admin-add-trainer.html" class="btn btn-sm btn-outline" style="flex: 1;">Edit</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trainer 5 -->
+        <div class="card">
+          <div class="text-center">
+            <div class="profile-circle lg">🥋</div>
+            <h4>James Martinez</h4>
+            <span class="badge badge-danger" style="margin-bottom: 1rem; display: inline-block;">Martial Arts</span>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem;">Members: 5</p>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">7 years experience</p>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="trainer-dashboard.html" class="btn btn-sm btn-primary" style="flex: 1;">View Schedule</a>
+              <a href="admin-add-trainer.html" class="btn btn-sm btn-outline" style="flex: 1;">Edit</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trainer 6 -->
+        <div class="card">
+          <div class="text-center">
+            <div class="profile-circle lg">🏊</div>
+            <h4>Lisa Anderson</h4>
+            <span class="badge badge-success" style="margin-bottom: 1rem; display: inline-block;">Swimming Coach</span>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem;">Members: 4</p>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">9 years experience</p>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="trainer-dashboard.html" class="btn btn-sm btn-primary" style="flex: 1;">View Schedule</a>
+              <a href="admin-add-trainer.html" class="btn btn-sm btn-outline" style="flex: 1;">Edit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

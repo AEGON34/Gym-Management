@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login - PowerFit Gym</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="animations.css">
+</head>
+<body style="display: flex; align-items: center; justify-content: center; min-height: 100vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+  <!-- LOGIN CARD -->
+  <div class="card" style="max-width: 400px; width: 90%; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔐</div>
+      <h1 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Admin Login</h1>
+      <p style="color: #6b7280;">Sign in to your administrator account</p>
+    </div>
+
+    <form>
+      <!-- Email Field -->
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="admin@fittrack.com" required>
+      </div>
+
+      <!-- Password Field -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="••••••••" required>
+      </div>
+
+      <!-- Remember Me Checkbox -->
+      <div class="form-group">
+        <label style="font-weight: 400; display: flex; align-items: center;">
+          <input type="checkbox" id="remember" name="remember" style="margin-right: 0.5rem;">
+          Remember me
+        </label>
+      </div>
+
+      <!-- Sign In Button -->
+      <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-bottom: 1rem;">Sign In</button>
+
+      <!-- Forgot Password Link -->
+      <div style="text-align: right;">
+        <a href="#" style="font-size: 0.875rem;">Forgot password?</a>
+      </div>
+    </form>
+
+    <!-- Back to Home -->
+    <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e5e7eb;">
+      <p style="font-size: 0.875rem; margin-bottom: 0.5rem;">Back to home</p>
+      <a href="index.html" class="btn btn-outline" style="width: 100%;">Home Page</a>
+    </div>
+  </div>
+</body>
+</html>

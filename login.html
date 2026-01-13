@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - PowerFit Gym</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="animations.css">
+  <style>
+    /* Login Page Specific Styles */
+    .login-page {
+      min-height: 100vh;
+      background-color: #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .login-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.75rem;
+      font-weight: bold;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    .login-logo-icon {
+      font-size: 2rem;
+    }
+
+    .back-to-home {
+      color: var(--text-primary);
+      font-weight: 500;
+      margin-bottom: 2rem;
+      text-decoration: none;
+    }
+
+    .back-to-home:hover {
+      color: var(--primary);
+    }
+
+    .login-tabs {
+      display: flex;
+      gap: 0;
+      margin-bottom: 0;
+    }
+
+    .login-tab {
+      padding: 0.875rem 2rem;
+      background: transparent;
+      border: none;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      border-radius: 25px;
+    }
+
+    .login-tab:hover {
+      color: var(--text-primary);
+    }
+
+    .login-tab.active {
+      color: var(--text-primary);
+      border-color: var(--text-primary);
+      background: transparent;
+    }
+
+    .login-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .login-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .login-demo {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .login-form .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .login-form label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .login-form input {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .login-form input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 1rem;
+      background: var(--text-primary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 0.5rem;
+    }
+
+    .login-btn:hover {
+      background: #374151;
+    }
+
+    .login-btn.admin-btn {
+      background: #1f2937;
+    }
+
+    .login-btn.trainer-btn {
+      background: var(--success);
+    }
+
+    .login-btn.trainer-btn:hover {
+      background: #059669;
+    }
+
+    .login-btn.member-btn {
+      background: var(--primary);
+    }
+
+    .login-btn.member-btn:hover {
+      background: var(--primary-hover);
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .login-tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .login-tab {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.875rem;
+      }
+
+      .login-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-page">
+    <!-- Logo -->
+    <div class="login-logo">
+      <span class="login-logo-icon">🏋️</span>
+      PowerFit Gym
+    </div>
+
+    <!-- Back to Home -->
+    <a href="index.html" class="back-to-home">Back to Home</a>
+
+    <!-- Login Tabs -->
+    <div class="login-tabs">
+      <button class="login-tab active" onclick="showLoginTab('admin')">Admin</button>
+      <button class="login-tab" onclick="showLoginTab('trainer')">Trainer</button>
+      <button class="login-tab" onclick="showLoginTab('member')">Member</button>
+    </div>
+
+    <!-- Login Card -->
+    <div class="login-card">
+      <!-- Admin Login -->
+      <div id="admin-tab" class="tab-content active">
+        <h3 class="login-title">Admin Login</h3>
+        <p class="login-demo">Demo: admin@gym.com / admin123</p>
+        <form class="login-form" action="admin-dashboard.html">
+          <div class="form-group">
+            <label for="admin-email">Email</label>
+            <input type="email" id="admin-email" name="email" placeholder="admin@gym.com">
+          </div>
+          <div class="form-group">
+            <label for="admin-password">Password</label>
+            <input type="password" id="admin-password" name="password" placeholder="admin123">
+          </div>
+          <button type="submit" class="login-btn admin-btn">Login as Admin</button>
+        </form>
+      </div>
+
+      <!-- Trainer Login -->
+      <div id="trainer-tab" class="tab-content">
+        <h3 class="login-title">Trainer Login</h3>
+        <p class="login-demo">Demo: trainer@gym.com / trainer123</p>
+        <form class="login-form" action="trainer-dashboard.html">
+          <div class="form-group">
+            <label for="trainer-email">Email</label>
+            <input type="email" id="trainer-email" name="email" placeholder="trainer@gym.com">
+          </div>
+          <div class="form-group">
+            <label for="trainer-password">Password</label>
+            <input type="password" id="trainer-password" name="password" placeholder="trainer123">
+          </div>
+          <button type="submit" class="login-btn trainer-btn">Login as Trainer</button>
+        </form>
+      </div>
+
+      <!-- Member Login -->
+      <div id="member-tab" class="tab-content">
+        <h3 class="login-title">Member Login</h3>
+        <p class="login-demo">Demo: member@gym.com / member123</p>
+        <form class="login-form" action="member-dashboard.html">
+          <div class="form-group">
+            <label for="member-email">Email</label>
+            <input type="email" id="member-email" name="email" placeholder="member@gym.com">
+          </div>
+          <div class="form-group">
+            <label for="member-password">Password</label>
+            <input type="password" id="member-password" name="password" placeholder="member123">
+          </div>
+          <button type="submit" class="login-btn member-btn">Login as Member</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showLoginTab(tab) {
+      // Remove active from all tabs and content
+      document.querySelectorAll('.login-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      
+      // Add active to clicked tab
+      event.target.classList.add('active');
+      document.getElementById(tab + '-tab').classList.add('active');
+    }
+  </script>
+</body>
+</html>
